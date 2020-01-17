@@ -2,6 +2,7 @@ const express=require('express')
 const app=express()
 const BodyParser=require('body-parser')
 const PORT=2020
+const huruf = require('lodash')
 
 
 app.use(BodyParser.urlencoded({extended:false}))
@@ -131,7 +132,6 @@ app.delete('/delete/:id', (req,res)=>{
 //search starts
 app.get('/popok', (req,res)=>{
     console.log(req.query)
-
     var { nama, harga,hargamax,hargamin } = req.query
     if(nama||harga){
         var newarr=arrprod.filter((val)=> val.nama.includes(nama) || val.harga === parseInt(harga))
