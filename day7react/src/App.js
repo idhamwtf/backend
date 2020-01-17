@@ -30,7 +30,8 @@ function App() {
 
 
   const renderusers=()=>{
-    datausers.map((val,index)=>{
+
+   return datausers.map((val,index)=>{
       return(
         <tr key={index}>
           <th scope="row"> {index+1}</th>
